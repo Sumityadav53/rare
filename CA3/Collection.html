@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rare Car Collection</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #111;
+            color: #f9f9f9;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+            color: #d4af37;
+            margin-top: 30px;
+        }
+        .filter-bar {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .filter-bar select {
+            padding: 10px;
+            font-size: 1em;
+            color: #333;
+            margin: 0 10px;
+            border: 1px solid #d4af37;
+        }
+        .car-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .car-card {
+            background-color: #222;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s;
+        }
+        .car-card:hover {
+            transform: scale(1.05);
+        }
+        .car-card img {
+            width: 100%;
+            height: auto;
+        }
+        .car-info {
+            padding: 20px;
+            text-align: center;
+        }
+        .car-info h2 {
+            font-size: 1.5em;
+            color: #d4af37;
+            margin-bottom: 10px;
+        }
+        .car-info p {
+            font-size: 1em;
+            color: #ccc;
+        }
+        .car-info button {
+            padding: 10px 20px;
+            background-color: #d4af37;
+            color: #111;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+        .car-info button:hover {
+            background-color: #f1c40f;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1em;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ddd;
+        }
+        .background-clip{
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            z-index: -1;            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <video autoplay muted loop class="background-clip">
+            <source src="Supra MK4 short edit.mp4" type="video/mp4">
+        </video>
+    <h1>Collection</h1>
+    <nav>
+        <ul>
+            <li> <button><a href="index.html" style="text-decoration: none; color: #111;"> Home </a></button></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="filter-bar">
+        <select name="make" id="make">
+            <option value="">Filter by Make</option>
+            <option value="Ferrari">Ferrari</option>
+            <option value="Lamborghini">Lamborghini</option>
+            <option value="Porsche">Porsche</option>
+        </select>
+        <select name="year" id="year">
+            <option value="">Filter by Year</option>
+            <option value="1960">1960s</option>
+            <option value="1970">1970s</option>
+            <option value="1980">1980s</option>
+        </select>
+    </div>
+
+    <div class="car-grid">
+        <!-- Car 1 -->
+        <div class="car-card">
+            <img src="car1.jpg" alt="Ferrari 250 GTO">
+            <div class="car-info">
+                <h2>Rolls-Royce 15 HP (1904-1905)</h2>
+                <p>a rare and historic vehicle produced by Royce Ltd., the company founded by Henry Royce.</p>
+                <button><a href="car1.html" style="text-decoration: none; color: black;">View Details</a></button>
+            </div>
+        </div>
+
+        <!-- Car 2 -->
+        <div class="car-card">
+            <img src="car2.jpg" alt="Bugatti Type 57SC Atlantic (1936-1938)">
+            <div class="car-info">
+                <h2>Bugatti Type 57SC Atlantic (1936-1938)</h2>
+                <p>a rare and iconic grand tourer produced by Bugatti from 1936 to 1938.</p>
+                <button><a href="car2.html" style="text-decoration: none; color: black;">View Details</a></button>
+            </div>
+        </div>
+
+        <!-- Car 3 -->
+        <div class="car-card">
+            <img src="car3.jpg" alt="Ferrari 250 GTO (1962-1964)">
+            <div class="car-info">
+                <h2>Ferrari 250 GTO (1962-1964)</h2>
+                <p>grand tourer produced by Ferrari from 1962 to 1964 for homologation into the FIA’s Group 3 Grand Touring Car category.</p>
+                <button><a href="car3.html" style="text-decoration: none; color: black;">View Details</a></button>
+            </div>
+        </div>
+        
+        <!-- Car 4 -->
+        <div class="car-card">
+            <img src="car4.jpg" alt="Aston Martin DBR1 (1956)">
+            <div class="car-info">
+                <h2>Aston Martin DBR1 (1956)</h2>
+                <p>sports racing car built by Aston Martin in 1956, designed by Ted Cutting,
+                   and intended for the World Sportscar Championship and non-championship sportscar races.</p>
+                <button><a href="car4.html" style="text-decoration: none; color: black;">View Details</a></button>
+            </div>
+        </div>
+
+        <!-- Car 5 -->
+        <div class="car-card">
+            <img src="car5.jpg" alt="Mercedes-Benz 300 SLR Uhlenhaut Coupe (1955)">
+            <div class="car-info">
+                <h2>Mercedes-Benz 300 SLR Uhlenhaut Coupe (1955)</h2>
+                <p>The Mercedes-Benz 300 SLR Uhlenhaut Coupe is a rare and iconic vehicle, with only two units ever produced.</p>
+                <button><a href="car5.html" style="text-decoration: none; color: black;">View Details</a></button>
+            </div>
+        </div>
+
+        <!-- Car 6 -->
+        <div class="car-card">
+            <img src="car6.jpg" alt="McLaren F1 LM (1995)">
+            <div class="car-info">
+                <h2>McLaren F1 LM (1995)</h2>
+                <p>Originally, only five LM models were made to honor McLaren’s victory at Le Mans. </p>
+                <button><a href="car6.html" style="text-decoration: none; color: black;">View Details</a></button>
+            </div>
+        </div>
+      </div>
+    </div>
+
+</body>
+</html>
